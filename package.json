@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-amocrm",
+  "name": "@hexlet/n8n-nodes-amocrm",
   "version": "0.0.17",
   "description": "n8n node for amocrm Api",
   "keywords": [
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yatolstoy/n8n-node-amocrm.git"
+    "url": "https://github.com/Hexlet/n8n-node-amocrm.git"
   },
   "main": "index.js",
   "scripts": {
