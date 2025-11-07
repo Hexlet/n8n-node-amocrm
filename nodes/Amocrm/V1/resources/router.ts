@@ -8,6 +8,7 @@ import * as tasks from './tasks';
 import * as companies from './companies';
 import * as notes from './notes';
 import * as catalogs from './catalogs';
+import * as unsorted from './unsorted';
 
 export async function router(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 	const items = this.getInputData();
@@ -38,6 +39,8 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 				responseData = await notes[amo.operation].execute.call(this, i);
 			} else if (amo.resource === 'catalogs') {
 				responseData = await catalogs[amo.operation].execute.call(this, i);
+			} else if (amo.resource === 'unsorted') {
+				responseData = await unsorted[amo.operation].execute.call(this, i);
 			}
 
 			const executionData = this.helpers.constructExecutionMetaData(
